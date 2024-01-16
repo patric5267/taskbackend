@@ -9,8 +9,8 @@ app.use(express.json())
 app.use(require('./routes/user'))
 app.use(require('./routes/note'))
 
-app.get('/' , ()=>{
-    console.log('Server successfully started');
+app.get('/' , (req,res)=>{
+   res.send("Home")
 })
 
 app.listen(port , ()=>{
